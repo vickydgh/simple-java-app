@@ -4,31 +4,26 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/vickydgh/simple-java-app.git'
+                checkout scm
             }
         }
-
         stage('Build') {
             steps {
                 echo 'Building...'
-                // Replace with Windows-compatible build commands, if needed
-                bat 'mvn clean package'
+                // Compile the Java application using Ant or another tool
+                bat 'ant compile' // Use 'bat' for Windows batch commands
             }
         }
-
         stage('Test') {
             steps {
                 echo 'Testing...'
-                // Replace with Windows-compatible test commands, if needed
-                bat 'mvn test'
+                // Add your test commands here
             }
         }
-
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // Replace with Windows-compatible deploy commands, if needed
-                bat 'mvn deploy'
+                // Add your deployment commands here
             }
         }
     }
