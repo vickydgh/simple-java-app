@@ -1,5 +1,9 @@
 pipeline {
+<<<<<<< HEAD
 agent any
+=======
+    agent any
+>>>>>>> 629b386bd207a98621e7c189ab5598763a8d4645
 
     stages {
         stage('Build') {
@@ -21,5 +25,10 @@ agent any
                 // Here you would add steps to deploy your application
             }
         }
+<<<<<<< HEAD
     } 
 } 
+=======
+    }
+}
+>>>>>>> 629b386bd207a98621e7c189ab5598763a8d4645
